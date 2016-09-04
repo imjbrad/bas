@@ -1,0 +1,83 @@
+.hero-container {
+    margin-top: $menu-height;
+    padding: 0;
+
+    .hero-slider {
+
+        margin-bottom: 0;
+        border-bottom: 1px solid #f2f2f2;
+
+        .slick-arrow {
+
+            $button-size: 4rem;
+
+            z-index: 1;
+
+            &.slick-next{
+                right: 25px;
+            }
+
+            &.slick-prev{
+                left: 25px;
+            }
+
+            &:before{
+                color: rgba(255, 255, 255, .7);
+            }
+
+            @media (min-width: $screen-sm-min) {
+                width: $button-size;
+                height: $button-size;
+
+                &:before{
+                    font-size: $button-size;
+                }
+
+            }
+
+        }
+
+        .slick-dots {
+            //background-color: darken($leaf, 10%);
+            bottom: -34px;
+
+            li {
+                margin: 0 0px;
+
+                button {
+                    height: 25px;
+                    width: 25px;
+
+                    &:before {
+
+                        @media (min-width: $screen-sm-min) {
+                            font-size: 10px;
+                        }
+
+                    }
+                }
+            }
+
+
+        }
+
+        .slide {
+            width: 100%;
+            cursor: pointer;
+
+            &:focus {
+                border: none;
+                outline: none;
+            }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+        }
+
+    }
+
+
+}

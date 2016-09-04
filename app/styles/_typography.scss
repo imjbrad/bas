@@ -1,0 +1,76 @@
+//inspired by http://zellwk.com/blog/responsive-typography/
+
+html {
+
+    font-size: 12px;
+
+    @media (min-width: $screen-sm-min) {
+        font-size: 13px;
+    }
+
+    @media (min-width: $screen-md-min) {
+        font-size: 14px;
+    }
+
+    @media (min-width: $screen-lg-min) {
+        font-size: 15px;
+    }
+
+    line-height: 1.35rem;
+
+}
+
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1rem; }
+
+h1, h2, h3, h4 {
+    font-weight: bold;
+    line-height: 1.1em;
+    font-family: "Arial", sans-serif;
+}
+
+body {
+    font-size: 1rem;
+    font-family: "Georgia", serif;
+}
+
+.paragraph-wrapper {
+
+    h1, h2, h3, h4 {
+        margin-top: 0;
+        margin-bottom: 1em;
+
+        & ~ p {
+            margin-bottom: 0;
+            margin-top: 0;
+            font-size: .9rem;
+            line-height: 1.6em;
+
+            & ~ p {
+                margin-top: 1em;
+            }
+
+
+        }
+
+    }
+
+}
+
+//
+//.pi-section-header .pi-paragraph-wrapper {
+//
+//    h1 {
+//
+//        margin-bottom: .5em;
+//
+//        & + p {
+//            font-size: .9rem;
+//            line-height: 1.4em;
+//        }
+//
+//    }
+//
+//}

@@ -1,0 +1,56 @@
+.welcome-section {
+
+    //sm+
+    @media (min-width: $screen-sm-min) {
+        padding-top: 80px;
+    }
+
+}
+
+.welcome-p-wrapper {
+
+    margin: auto;
+    margin-bottom: $spacing;
+
+    //sm+
+    @media (min-width: $screen-sm-min) {
+        width: 80%;
+        text-align: center;
+    }
+
+}
+
+.contact {
+    border: 1px solid red;
+    padding: 40px;
+
+    form {
+        background-color: $maroon;
+        padding: 25px;
+
+        color: white;
+
+        h3 {
+            margin-top: 0;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            font-size: 1em;
+            border: none;
+            margin-bottom: 5px;
+            background-color: $leaf;
+            padding: 15px 15px;
+            color: black;
+
+            &:last-of-type {
+               // margin-bottom: 0;
+            }
+
+        }
+
+        #submit {
+        }
+    }
+}

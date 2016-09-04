@@ -1,0 +1,42 @@
+footer {
+    background-color: $maroon;
+    color: white;
+
+    font-family: "Arial";
+
+    .list-side {
+
+        ul {
+            padding: 0;
+            list-style: none;
+
+            li {
+
+                &:first-child {
+                    font-weight: bold;
+                }
+
+                &:not(:first-child) {
+                    margin-bottom: .35em;
+                    font-size: .9em;
+                }
+
+                a {
+                    color: inherit;
+                }
+
+
+            }
+        }
+
+    }
+
+    .info-side  {
+
+        .contact-info {
+             font-size: .75em;
+             line-height: 1.6em;
+        }
+    }
+
+}
