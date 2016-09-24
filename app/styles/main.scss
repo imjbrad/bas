@@ -2,6 +2,8 @@ $slick-font-path: "../bower_components/slick-carousel/slick/fonts/";
 $icon-font-path: "../bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap";
+
+
 @import "../bower_components/slick-carousel/slick/slick.scss";
 @import "../bower_components/slick-carousel/slick/slick-theme.scss";
 
@@ -21,6 +23,7 @@ $spacing: 40px;
 html, body {
     margin: 0;
     padding: 0;
+
 }
 
 h1, h2, h3, h4, h5 {margin-top: 0;}
@@ -114,22 +117,29 @@ button {
     padding: 15px 30px;
     background-color: $green;
     color: white;
-    outline: 0;
+    outline: none;
     -webkit-appearance: none;
     border: 1px solid darken($green, 6%);
+    transition: all .2s;
+    margin: initial;
 
     font-size: .9em;
     font-weight: bold;
 
+
     @extend h3;
+
+    &:hover {
+      background-color: darken($green, 8%);
+    }
 
     &:active, &:focus {
         outline: none;
-        border: initial;
+        background-color: darken($green, 10%);
+        border: 1px solid darken($green, 15%);
     }
 
     .glyphicon {
-        top: 3px;
         margin-left: 5px;
     }
 
@@ -142,4 +152,4 @@ button {
 @import "more";
 @import "testimonial";
 @import "footer";
-
+@import "popover";

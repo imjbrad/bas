@@ -79,7 +79,7 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#about-section-anchor">About</a></li>
                     <li><a href="#services-section-anchor">Our Academic Services</a></li>
-                    <li><a href="#company-section-anchor">Our Compnay</a></li>
+                    <li><a href="#company-section-anchor">Our Company</a></li>
                 </ul>
             </div>
         </div>
@@ -128,12 +128,13 @@
                     <!--<button id="submit" type="submit">Get in Touch</button>-->
                 <!--</form>-->
             <!--</div>-->
+
         </section>
 
         <a id="services-section-anchor" class="anchor"></a>
         <section class="services-section bas-section" ng-controller="ServicesController">
-            <div class="container section-intro-text-wrapper">
-                <div class="section-intro-text paragraph-wrapper">
+            <div class="section-intro-text-wrapper">
+                <div class="section-intro-text paragraph-wrapper col-sm-7">
                     <h2>Our Academic Services:</h2>
                     <p>
                         Brandywine Academic Services offers a variety of tutoring programs that can be customized to meet your individual needs.
@@ -141,13 +142,21 @@
                         Browse Our Academic Services on the left to learn more.
                     </p>
                 </div>
+                <div class="statistics-box col-sm-offset-1 col-sm-4">
+                    <div class="top">Most clients see a</div>
+                    <div class="middle">60% SAT<br>Improvement</div>
+                    <div class="bottom">with the help of<br>BAS tutoring.</div>
+                </div>
             </div>
             <div class="col-sm-4 services-list-wrapper">
-                <div class="select-wrapper hide-gte-sm academicSelect">
-                    <span class="dropdown-arrow glyphicon glyphicon-chevron-down"></span>
-                    <select class="academic-select" ng-model="_selectedServiceIndexInput" ng-change="selectService(_selectedServiceIndexInput)">
-                        <option ng-repeat="service in services" value="{{ $index }}">{{ service.name }}</option>
-                    </select>
+                <div class="select-wrapper hide-gte-sm">
+                    <h3 class="select-prompt">Select a service to learn more:</h3>
+                    <div class="academicSelect">
+                        <span class="dropdown-arrow glyphicon glyphicon-chevron-down"></span>
+                        <select class="academic-select" ng-model="_selectedServiceIndexInput" ng-change="selectService(_selectedServiceIndexInput)">
+                            <option ng-repeat="service in services" value="{{ $index }}">{{ service.name }}</option>
+                        </select>
+                    </div>
                 </div>
                 <ul class="hide-lte-sm">
                     <li ng-repeat="service in services" ng-click="selectService($index)" ng-class="{'selectedService' : $index == selectedServiceIndex}">{{ service.name }}</li>
@@ -156,11 +165,11 @@
             <div class="col-sm-8 services-detail-wrapper">
                 <div class="current-service-detail-wrapper">
                     <h3 class="service-name hide-lte-sm" >{{ selectedService.name }}</h3>
-                    <div ng-bind-html="selectedService.shortDescription"></div>
+                    <div ng-bind-html="selectedService.shortDescription"></div><br/>
+                    <button ng-click="openServiceInPopover()">See Details and Pricing <span class="glyphicon glyphicon-new-window"></span></button>
                 </div>
                 <div class="call-to-action-buttons">
                     <div class="email-founder">Email our founder, Robin Hinmon, to get started: <span class="email">hinmonr@brandywineacademicservices.com</span></div>
-                    <!--<button>Learn More About Our Company <span class="glyphicon glyphicon-chevron-down"></span></button>-->
                 </div>
             </div>
         </section>
@@ -316,6 +325,20 @@
 
         });
 
+    </script>
+
+    <script type="text/ng-template" id="popover.html">
+        <section class="bas-popover">
+            <button ng-click="close()" class="close-button glyphicon glyphicon-remove"></button>
+            <div class="paragraph-wrapper">
+                <h2 class="popover-header">{{ options.header }}</h2>
+                <p class="popover-content-wrapper">
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+<br><br>
+                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                </p>
+            </div>
+        </section>
     </script>
 
 </body>

@@ -16,7 +16,7 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('app/styles'))
         .pipe(reload({stream:true}))
         .pipe($.size())
-        .pipe($.notify("Compilation complete."));;
+        .pipe($.notify("Compilation complete."));
 });
 
 gulp.task('scripts', function () {
@@ -110,10 +110,10 @@ gulp.task('wiredep', function () {
 });
 
 gulp.task('watch', ['serve'], function () {
- 
+
     // watch for changes
     gulp.watch(['app/*.html'], reload);
- 
+
     gulp.watch('app/styles/**/*.scss', ['styles']);
     gulp.watch('app/scripts/**/*.js', ['scripts']);
     gulp.watch('app/images/**/*', ['images']);

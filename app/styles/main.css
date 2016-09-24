@@ -207,13 +207,13 @@ th {
   h2,
   h3,
   button,
-  .services-section .services-list-wrapper .select-wrapper select {
+  .services-section .services-list-wrapper .academicSelect select {
     orphans: 3;
     widows: 3; }
   h2,
   h3,
   button,
-  .services-section .services-list-wrapper .select-wrapper select {
+  .services-section .services-list-wrapper .academicSelect select {
     page-break-after: avoid; }
   select {
     background: #fff !important; }
@@ -938,7 +938,7 @@ hr {
   overflow: visible;
   clip: auto; }
 
-h1, h2, h3, button, .services-section .services-list-wrapper .select-wrapper select, h4, .email-founder, h5, h6,
+h1, h2, h3, button, .services-section .services-list-wrapper .academicSelect select, h4, .email-founder, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 500;
@@ -946,8 +946,8 @@ h1, h2, h3, button, .services-section .services-list-wrapper .select-wrapper sel
   color: inherit; }
   h1 small,
   h1 .small, h2 small,
-  h2 .small, h3 small, button small, .services-section .services-list-wrapper .select-wrapper select small,
-  h3 .small, button .small, .services-section .services-list-wrapper .select-wrapper select .small, h4 small, .email-founder small,
+  h2 .small, h3 small, button small, .services-section .services-list-wrapper .academicSelect select small,
+  h3 .small, button .small, .services-section .services-list-wrapper .academicSelect select .small, h4 small, .email-founder small,
   h4 .small, .email-founder .small, h5 small,
   h5 .small, h6 small,
   h6 .small,
@@ -966,7 +966,7 @@ h1, .h1,
 h2, .h2,
 h3,
 button,
-.services-section .services-list-wrapper .select-wrapper select, .h3 {
+.services-section .services-list-wrapper .academicSelect select, .h3 {
   margin-top: 20px;
   margin-bottom: 10px; }
   h1 small,
@@ -975,8 +975,8 @@ button,
   h2 small,
   h2 .small, .h2 small,
   .h2 .small,
-  h3 small, button small, .services-section .services-list-wrapper .select-wrapper select small,
-  h3 .small, button .small, .services-section .services-list-wrapper .select-wrapper select .small, .h3 small,
+  h3 small, button small, .services-section .services-list-wrapper .academicSelect select small,
+  h3 .small, button .small, .services-section .services-list-wrapper .academicSelect select .small, .h3 small,
   .h3 .small {
     font-size: 65%; }
 
@@ -1002,7 +1002,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: 30px; }
 
-h3, button, .services-section .services-list-wrapper .select-wrapper select, .h3 {
+h3, button, .services-section .services-list-wrapper .academicSelect select, .h3 {
   font-size: 24px; }
 
 h4, .email-founder, .h4 {
@@ -5317,30 +5317,31 @@ h1 {
 h2 {
   font-size: 1.5rem; }
 
-h3, button, .services-section .services-list-wrapper .select-wrapper select {
+h3, button, .services-section .services-list-wrapper .academicSelect select {
   font-size: 1.25rem; }
 
 h4, .email-founder {
   font-size: 1rem; }
 
-h1, h2, h3, button, .services-section .services-list-wrapper .select-wrapper select, h4, .email-founder {
+h1, h2, h3, button, .services-section .services-list-wrapper .academicSelect select, h4, .email-founder {
   font-weight: bold;
   line-height: 1.1em;
-  font-family: "Arial", sans-serif; }
+  font-family: "Arial", sans-serif;
+  margin-bottom: 1em; }
 
 body {
   font-size: 1rem;
   font-family: "Georgia", serif; }
 
-.paragraph-wrapper h1, .paragraph-wrapper h2, .paragraph-wrapper h3, .paragraph-wrapper button, .paragraph-wrapper .services-section .services-list-wrapper .select-wrapper select, .services-section .services-list-wrapper .select-wrapper .paragraph-wrapper select, .paragraph-wrapper h4, .paragraph-wrapper .email-founder {
+.paragraph-wrapper h1, .paragraph-wrapper h2, .paragraph-wrapper h3, .paragraph-wrapper button, .paragraph-wrapper .services-section .services-list-wrapper .academicSelect select, .services-section .services-list-wrapper .academicSelect .paragraph-wrapper select, .paragraph-wrapper h4, .paragraph-wrapper .email-founder {
   margin-top: 0;
   margin-bottom: 1em; }
-  .paragraph-wrapper h1 ~ p, .paragraph-wrapper h2 ~ p, .paragraph-wrapper h3 ~ p, .paragraph-wrapper button ~ p, .paragraph-wrapper .services-section .services-list-wrapper .select-wrapper select ~ p, .services-section .services-list-wrapper .select-wrapper .paragraph-wrapper select ~ p, .paragraph-wrapper h4 ~ p, .paragraph-wrapper .email-founder ~ p {
+  .paragraph-wrapper h1 ~ p, .paragraph-wrapper h2 ~ p, .paragraph-wrapper h3 ~ p, .paragraph-wrapper button ~ p, .paragraph-wrapper .services-section .services-list-wrapper .academicSelect select ~ p, .services-section .services-list-wrapper .academicSelect .paragraph-wrapper select ~ p, .paragraph-wrapper h4 ~ p, .paragraph-wrapper .email-founder ~ p {
     margin-bottom: 0;
     margin-top: 0;
     font-size: .9rem;
     line-height: 1.6em; }
-    .paragraph-wrapper h1 ~ p ~ p, .paragraph-wrapper h2 ~ p ~ p, .paragraph-wrapper h3 ~ p ~ p, .paragraph-wrapper button ~ p ~ p, .paragraph-wrapper .services-section .services-list-wrapper .select-wrapper select ~ p ~ p, .services-section .services-list-wrapper .select-wrapper .paragraph-wrapper select ~ p ~ p, .paragraph-wrapper h4 ~ p ~ p, .paragraph-wrapper .email-founder ~ p ~ p {
+    .paragraph-wrapper h1 ~ p ~ p, .paragraph-wrapper h2 ~ p ~ p, .paragraph-wrapper h3 ~ p ~ p, .paragraph-wrapper button ~ p ~ p, .paragraph-wrapper .services-section .services-list-wrapper .academicSelect select ~ p ~ p, .services-section .services-list-wrapper .academicSelect .paragraph-wrapper select ~ p ~ p, .paragraph-wrapper h4 ~ p ~ p, .paragraph-wrapper .email-founder ~ p ~ p {
       margin-top: 1em; }
 
 * {
@@ -5350,7 +5351,7 @@ html, body {
   margin: 0;
   padding: 0; }
 
-h1, h2, h3, button, .services-section .services-list-wrapper .select-wrapper select, h4, .email-founder, h5 {
+h1, h2, h3, button, .services-section .services-list-wrapper .academicSelect select, h4, .email-founder, h5 {
   margin-top: 0; }
 
 body {
@@ -5415,16 +5416,20 @@ button {
   padding: 15px 30px;
   background-color: #91B859;
   color: white;
-  outline: 0;
+  outline: none;
   -webkit-appearance: none;
   border: 1px solid #82aa49;
+  transition: all .2s;
+  margin: initial;
   font-size: .9em;
   font-weight: bold; }
+  button:hover {
+    background-color: #7ca346; }
   button:active, button:focus {
     outline: none;
-    border: initial; }
+    background-color: #779b43;
+    border: 1px solid #698a3b; }
   button .glyphicon {
-    top: 3px;
     margin-left: 5px; }
 
 .main-navigation {
@@ -5473,13 +5478,16 @@ button {
     .bas-navbar #navbar {
       float: right; }
       .bas-navbar #navbar .nav li {
-        border: none; }
+        border: none;
+        border-bottom: 4px solid transparent; }
         .bas-navbar #navbar .nav li:not(:last-of-type) {
           border-right: 1px solid #501e26; }
         .bas-navbar #navbar .nav li a {
           padding: 0 15px;
           line-height: 70px;
-          color: white; } }
+          color: white; }
+        .bas-navbar #navbar .nav li:hover {
+          background-color: #572129; } }
 
 .hero-container {
   margin-top: 70px;
@@ -5540,7 +5548,7 @@ button {
     background-color: #6A2832;
     padding: 25px;
     color: white; }
-    .contact form h3, .contact form button, .contact form .services-section .services-list-wrapper .select-wrapper select, .services-section .services-list-wrapper .select-wrapper .contact form select {
+    .contact form h3, .contact form button, .contact form .services-section .services-list-wrapper .academicSelect select, .services-section .services-list-wrapper .academicSelect .contact form select {
       margin-top: 0; }
     .contact form input {
       display: block;
@@ -5553,27 +5561,51 @@ button {
       color: black; }
 
 .services-section .section-intro-text-wrapper {
+  overflow: auto;
   margin-bottom: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #f0f3e7;
   width: 100%; }
-  @media (min-width: 768px) {
-    .services-section .section-intro-text-wrapper .section-intro-text {
-      width: 60%; } }
   .services-section .section-intro-text-wrapper .section-intro-text p {
     margin-bottom: 0; }
+  @media (max-width: 767px) {
+    .services-section .section-intro-text-wrapper {
+      padding-bottom: 0; } }
 
-.services-section .services-list-wrapper .select-wrapper {
+.services-section .statistics-box {
+  border-left: 1px solid #6A2832;
+  padding: 30px;
+  color: #6A2832;
+  text-align: center;
+  font-family: "Arial", sans-serif; }
+  @media (max-width: 767px) {
+    .services-section .statistics-box {
+      border-left: none;
+      border-top: 1px solid #6A2832;
+      margin-top: 30.76923px; } }
+  .services-section .statistics-box .top, .services-section .statistics-box .bottom {
+    font-size: .8em;
+    line-height: 1em; }
+  .services-section .statistics-box .middle {
+    font-weight: bold;
+    font-size: 1.7em;
+    line-height: .9em;
+    margin: 10px 0; }
+
+.services-section .services-list-wrapper .select-prompt {
+  margin-bottom: 20px; }
+
+.services-section .services-list-wrapper .academicSelect {
   width: 100%;
   position: relative;
   border: 1px solid #f0f3e7;
   margin-bottom: 20px;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
-  .services-section .services-list-wrapper .select-wrapper .dropdown-arrow {
+  .services-section .services-list-wrapper .academicSelect .dropdown-arrow {
     position: absolute;
     left: 15px;
     top: 23px; }
-  .services-section .services-list-wrapper .select-wrapper select {
+  .services-section .services-list-wrapper .academicSelect select {
     padding: 20px;
     padding-left: 35px;
     width: 100%;
@@ -5582,7 +5614,7 @@ button {
     border: none;
     margin-bottom: 0;
     position: relative; }
-    .services-section .services-list-wrapper .select-wrapper select:focus {
+    .services-section .services-list-wrapper .academicSelect select:focus {
       border: none;
       outline: none; }
 
@@ -5609,7 +5641,7 @@ button {
     padding-left: 40px; } }
 
 .services-section .services-detail-wrapper .current-service-detail-wrapper {
-  margin-bottom: 40px; }
+  margin-bottom: 20px; }
   .services-section .services-detail-wrapper .current-service-detail-wrapper .service-name {
     margin-top: 0;
     border-bottom: 1px solid #6A2832;
@@ -5687,3 +5719,37 @@ footer {
   footer .info-side .contact-info {
     font-size: .75em;
     line-height: 1.6em; }
+
+.modal-backdrop.in {
+  opacity: .2; }
+
+.bas-popover-window .modal-dialog {
+  margin: auto;
+  margin-top: 85px;
+  max-width: 970px; }
+
+.bas-popover-window .modal-content {
+  border-radius: 0;
+  box-shadow: 0 0 9px 2px #bebebe;
+  background-color: white; }
+
+.bas-popover-window .bas-popover {
+  padding: 40px; }
+  @media (max-width: 767px) {
+    .bas-popover-window .bas-popover {
+      padding: 20px; } }
+  .bas-popover-window .bas-popover .close-button {
+    font-size: 1.2em;
+    background-color: transparent;
+    color: #6A2832;
+    padding: 0;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+    border: none;
+    border-bottom: 2px solid #f0f3e7;
+    vertical-align: bottom; }
+    .bas-popover-window .bas-popover .close-button:hover {
+      color: #a23d4c; }
+  .bas-popover-window .bas-popover .popover-header {
+    border-bottom: 1px solid #6A2832;
+    padding-bottom: .5em; }

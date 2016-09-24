@@ -1,0 +1,60 @@
+.modal-backdrop.in  {
+    opacity: .2;
+}
+
+.bas-popover-window {
+
+    .modal-dialog {
+        margin: auto;
+        margin-top: $menu-height + 15px;
+        max-width: $container-md;
+    }
+
+    .modal-content {
+        border-radius: 0;
+        box-shadow: 0 0 9px 2px #bebebe;
+
+        background-color: white;
+    }
+
+    .bas-popover {
+
+        padding: 40px;
+
+        @media(max-width: $screen-xs-max) {
+            padding: 20px;
+        }
+
+        .close-button {
+
+            font-size: 1.2em;
+
+            background-color: transparent;
+            color: $maroon;
+
+            padding: 0;
+            padding-bottom: 6px;
+            margin-bottom: 16px;
+
+            border: none;
+            border-bottom: 2px solid $leaf;
+
+            vertical-align: bottom;
+
+            &:hover {
+                color: lighten($maroon, 15%);
+            }
+        }
+
+        .popover-header {
+            border-bottom: 1px solid $maroon;
+            padding-bottom: .5em;
+        }
+
+        .popover-content-wrapper {  }
+        
+    }
+
+
+}
+
