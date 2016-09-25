@@ -13,10 +13,10 @@ angular.module("bas", ["ui.bootstrap", "ngSanitize"])
                 animation: false,
                 windowClass: 'bas-popover-window',
                 templateUrl: 'popover.html',
-                controller: function($scope) {
+                controller: ["$scope", function($scope) {
                     $scope.options = $scope.$resolve.options;
                     $scope.close = currentModalInstance.close;
-                },
+                }],
                 resolve: {
                     options: function() { return options }
                 }
