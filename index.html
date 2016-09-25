@@ -1,0 +1,327 @@
+<!doctype html>
+<html class="no-js" ng-app="bas">
+<head>
+    <meta charset="utf-8">
+    <title>bas</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+
+    <link rel="stylesheet" href="styles/main.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+
+    <script src="scripts/vendor.js"></script>
+
+    <script src="scripts/main.js"></script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function (b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function () {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = '//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
+    </script>
+
+</head>
+<body>
+
+    <!--[if lt IE 10]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <nav class="bas-navbar navbar navbar-inverse navbar-fixed-top" ng-controller="MenuController">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle menu-button" ng-click="isCollapsed = !isCollapsed" >
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo-area" href="#">
+                    <img class="logo" src="http://brandywineacademicservices.com/sites/all/themes/BAS/templates/logo.png" />
+                    <h3 class="logotype">Brandywine Academic <br>Services</h3>
+                </div>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse" uib-collapse="isCollapsed">
+                <ul class="nav navbar-nav">
+                    <li><a href="#about-section-anchor">About</a></li>
+                    <li><a href="#services-section-anchor">Our Academic Services</a></li>
+                    <li><a href="#company-section-anchor">Our Company</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero-container container" id="hero-slider">
+        <div class="hero-slider slick-slider">
+            <a class="slide" href="http://www.google.com" target="_blank">
+                <img src="http://brandywineacademicservices.com/sites/default/files/Summer%20Programs.jpg">
+            </a>
+            <a class="slide" href="http://www.google.com" target="_blank">
+                <img src="http://brandywineacademicservices.com/sites/default/files/Summer%20Savings.jpg">
+            </a>
+            <a class="slide" href="http://www.google.com" target="_blank">
+                <img src="http://brandywineacademicservices.com/sites/default/files/SAT%205-2016.jpg">
+            </a>
+        </div>
+    </div>
+
+    <div class="main-content-container container">
+
+        <a id="about-section-anchor" class="anchor"></a>
+        <section class="welcome-section bas-section">
+            <div class="col-lg-12">
+                <div class="welcome-p-wrapper paragraph-wrapper">
+                    <h1>Welcome to Brandywine<br>Academic Services</h1>
+                    <p>Brandywine Academic Services provides private tutoring, study skills,
+                        SAT Prep and academic coaching to middle and high school students in
+                        Wilmington, Northern Delaware, and the surrounding area. Employing
+                        only the best certified teachers, students can be confident that they
+                        are receiving exceptional help at an affordable price.  There are no
+                        contracts to sign and no tests to undergo—just give us a call and together
+                        we will develop a learning program designed to fit your student’s needs.
+                    </p>
+                </div>
+                <h4 class="email-founder">Email our founder, Robin Hinmon, to get started: <span class="email">hinmonr@brandywineacademicservices.com</span></h4>
+                <!--<button class="">Learn More About Our Services</button>-->
+            </div>
+
+            <!--<div class="col-lg-6 contact">-->
+                <!--<form>-->
+                    <!--<h3>Let's Get in Touch:</h3>-->
+                    <!--<input type="text" placeholder="May we have your name?" />-->
+                    <!--<input type="text" placeholder="...and your email" />-->
+                    <!--<input type="text" placeholder="So, how can we help? (ie: 'help with math')" />-->
+                    <!--<button id="submit" type="submit">Get in Touch</button>-->
+                <!--</form>-->
+            <!--</div>-->
+
+        </section>
+
+        <a id="services-section-anchor" class="anchor"></a>
+        <section class="services-section bas-section" ng-controller="ServicesController">
+            <div class="section-intro-text-wrapper">
+                <div class="section-intro-text paragraph-wrapper col-sm-7">
+                    <h2>Our Academic Services:</h2>
+                    <p>
+                        Brandywine Academic Services offers a variety of tutoring programs that can be customized to meet your individual needs.
+                        Whether it’s traditional tutoring in one subject, assistance with an upcoming homework assignment, or academic coaching in all of your classes, we can help.
+                        Browse Our Academic Services on the left to learn more.
+                    </p>
+                </div>
+                <div class="statistics-box col-sm-offset-1 col-sm-4">
+                    <div class="top">Most clients see a</div>
+                    <div class="middle">60% SAT<br>Improvement</div>
+                    <div class="bottom">with the help of<br>BAS tutoring.</div>
+                </div>
+            </div>
+            <div class="col-sm-4 services-list-wrapper">
+                <div class="select-wrapper hide-gte-sm">
+                    <h3 class="select-prompt">Select a service to learn more:</h3>
+                    <div class="academicSelect">
+                        <span class="dropdown-arrow glyphicon glyphicon-chevron-down"></span>
+                        <select class="academic-select" ng-model="_selectedServiceIndexInput" ng-change="selectService(_selectedServiceIndexInput)">
+                            <option ng-repeat="service in services" value="{{ $index }}">{{ service.name }}</option>
+                        </select>
+                    </div>
+                </div>
+                <ul class="hide-lte-sm">
+                    <li ng-repeat="service in services" ng-click="selectService($index)" ng-class="{'selectedService' : $index == selectedServiceIndex}">{{ service.name }}</li>
+                </ul>
+            </div>
+            <div class="col-sm-8 services-detail-wrapper">
+                <div class="current-service-detail-wrapper">
+                    <h3 class="service-name hide-lte-sm" >{{ selectedService.name }}</h3>
+                    <div ng-bind-html="selectedService.shortDescription"></div><br/>
+                    <button ng-click="openServiceInPopover()">See Details and Pricing <span class="glyphicon glyphicon-new-window"></span></button>
+                </div>
+                <div class="call-to-action-buttons">
+                    <div class="email-founder">Email our founder, Robin Hinmon, to get started: <span class="email">hinmonr@brandywineacademicservices.com</span></div>
+                </div>
+            </div>
+        </section>
+
+        <a id="company-section-anchor" class="anchor"></a>
+        <section class="more-section bas-section" id="more">
+            <div class="col-sm-12">
+                <h2>Our Company:</h2>
+                <div class="video-reel container">
+                    <div class="video"><iframe allowfullscreen="" mozallowfullscreen="" src="http://player.vimeo.com/video/47560854?byline=0&amp;portrait=0&amp;color=ffffff" webkitallowfullscreen="" frameborder="0" height="140" width="250"></iframe></div>
+                    <div class="video"><iframe allowfullscreen="" frameborder="0" height="140" src="http://www.youtube.com/embed/Q7iIAwjiWSY" width="250"></iframe></div>
+                    <div class="video"><iframe allowfullscreen="" frameborder="0" height="140" mozallowfullscreen="" src="http://player.vimeo.com/video/47561079?byline=0&amp;portrait=0&amp;color=ffffff" webkitallowfullscreen="" width="250"></iframe></div>
+                </div>
+            </div>
+            <div class="robin-wrapper">
+                <div class="col-sm-4 robin-image-wrapper">
+                    <img class="robin" src="http://brandywineacademicservices.com/robin.jpg">
+                </div>
+                <div class="col-sm-8 bio-wrapper">
+                    <div class="paragraph-wrapper">
+                        <h3>Meet Robin Hinmon<br>Founder, Brandywine Academic Services</h3>
+                        <p>
+                            Robin Hinmon graduated from the University of Delaware's
+                            Honors Program with a Bachelor's degree in Biology Education
+                            and a minor in Mathematics. She holds a Master's degree in
+                            Molecular Biology and Biotechnology. Hinmon became a high
+                            school teacher to instill her love of learning to her students,
+                            but found her most rewarding experiences occurred as she
+                            worked part-time as a tutor.
+                        </p>
+                        <p>
+                            Brandywine Academic Services employs motivating tutors that
+                            have a genuine interest in your child's academic success.
+                            Each of our tutors has been screened, possesses a minimum
+                            of a Bachelor's degree, and has relevant teaching experience.
+                            Whether your child is enrolled in a private, small group, or
+                            classroom session, our tutors strive to create a personalized
+                            learning program that promotes independent thinking and learning.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="email-founder">Email our founder, Robin Hinmon, to get started: <span class="email">hinmonr@brandywineacademicservices.com</span></div>
+            </div>
+
+        </section>
+
+        <section class="testimonials-section bas-section">
+            <div class="testimonial col-sm-4">
+                <div class="testimonial-p-wrapper">
+                    <p>
+                        "I got a 690 in reading, a 690 in
+                        math, and a 680 in writing. Thank
+                        you so much for all of your help!"
+                        <br><br>
+                        <strong>- BZ, Garnet Valley, PA</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="testimonial col-sm-4">
+                <div class="testimonial-p-wrapper">
+                    <p>
+                        "Jeff is awesome! My son is very comfortable
+                        with him and has commented that Jeff makes
+                        it fun to learn and understand math. You
+                        did a great job pairing the two together!"
+                        <br><br>
+                        <strong>- KD, Hockessin, DE</strong>
+                    </p>
+                </div>
+            </div>
+            <div class="testimonial col-sm-4">
+                <div class="testimonial-p-wrapper">
+                    <p>
+                        "Robin, the tutor, was able to successfully
+                        help my high school junior develop much
+                        mproved study habits and note taking skills.
+                        I highly recommended Brandywine Academic Services."
+                        <br><br>
+                        <strong>- MT, Wilmington, DE</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bas-section">
+        <div class="footer-content-container container">
+            <div class="col-sm-6 list-side">
+                <ul>
+                    <li><h4>Learning Resources</h4></li>
+                    <li><a>Official SAT Practice Test</a></li>
+                    <li><a>Official SAT Question of the Day</a></li>
+                    <li><a>Buy the Book</a></li>
+                    <li><a>Vocab Game</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-6 info-side">
+                <div class="hidden-xs">
+                    <h4>Brandywine Academic Services</h4>
+                    <p>
+                        Brandywine Academic Services provides private
+                        tutoring, study skills, SAT Prep and academic
+                        coaching to middle and high school students in
+                        Wilmington, Northern Delaware, and the surrounding area.
+                    </p>
+                </div>
+                <div class="contact-info">
+                    <strong>Mailing Address:</strong> 2747 Shipley Rd, Wilmington, DE 19810<br>
+                    <strong>Office Address:</strong> 1701 Augustine Cut-Off, Bldg #1, Ste #11, Wilmington, DE 19803<br>
+                    <strong>Tel:</strong> 302.367.2857<br>
+                    <strong>Email:</strong> info@brandywineacademicservices.com
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+
+        $(document).on('ready', function(){
+
+            $('.hero-slider').slick({
+                lazyLoad: 'progressive',
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 769,
+                        settings: {
+                            dots: false
+                        }
+                    }
+                ]
+
+            });
+
+            $('.video-reel').slick({
+
+                infinite: true,
+                slidesToShow: 3,
+                draggable: false,
+
+                responsive: [
+                    {
+                        breakpoint: 769,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+
+            });
+
+        });
+
+    </script>
+
+    <script type="text/ng-template" id="popover.html">
+        <section class="bas-popover">
+            <button ng-click="close()" class="close-button glyphicon glyphicon-remove"></button>
+            <div class="paragraph-wrapper">
+                <h2 class="popover-header">{{ options.header }}</h2>
+                <p class="popover-content-wrapper">
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+<br><br>
+                    The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                </p>
+            </div>
+        </section>
+    </script>
+
+</body>
+</html>
