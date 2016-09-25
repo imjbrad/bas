@@ -1,8 +1,8 @@
 angular.module("bas", ["ui.bootstrap", "ngSanitize"])
 
-    .controller("MenuController", function ($scope) {
+    .controller("MenuController", ["$scope", function ($scope) {
             $scope.isCollapsed = true;
-    })
+    }])
 
     .factory("Popover", ["$uibModal", function($uibModal){
         var popoverService = {},
@@ -15,7 +15,7 @@ angular.module("bas", ["ui.bootstrap", "ngSanitize"])
                 templateUrl: 'popover.html',
                 controller: function($scope) {
                     $scope.options = $scope.$resolve.options;
-                    $scope.close = currentModalInstance.close
+                    $scope.close = currentModalInstance.close;
                 },
                 resolve: {
                     options: function() { return options }
@@ -26,7 +26,7 @@ angular.module("bas", ["ui.bootstrap", "ngSanitize"])
         return popoverService;
     }])
 
-    .controller("ServicesController", function ($scope, Popover) {
+    .controller("ServicesController", ["$scope", "Popover", function ($scope, Popover) {
         console.log("Hi");
 
         $scope.services = [
@@ -88,4 +88,4 @@ angular.module("bas", ["ui.bootstrap", "ngSanitize"])
         };
 
 
-    });
+    }]);
